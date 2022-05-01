@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+body{
+    /* height and background color */
+  min-height: 600px;
+  background: #f07167;
+}
+
+.skull {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.all {
+    /* to center the container with form */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.container {
+    /* container with css */
+    height: 380px;
+    max-width: 420px;
+    background: #2f3e46;
+    padding: 30px;
+    border-radius: 0px 0px 0px 0px;
+    transition: height 0.2s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.container.active{
+    /* resize of container */
+  height: 540px;
+  border-radius: 80px 80px 80px 80px;
+}
+
+h1 {
+  /* h1 tag decorate */
+  padding-top: 20px;;
+  color: #ffcb77;
+}
+
+header p{
+    /* styling para tag */
+  margin-top: 5px;
+  color: #c5dedd;
+  font-size: 16px;
+}
+
+.container .form{
+  /* for form padding */
+  padding-top: 20px;
+}
+
+.form :where(input, button){
+  /* in form for both input and button */
+  width: 100%;
+  height: 52px;
+  border: none;
+  outline: none;
+  transition: 0.1s ease;
+}
+.form input{
+  /* for input only */
+  font-size: 18px;
+  padding: 25px;
+  background: #fef9ef;
+}
+
+.form input:focus{
+  /* when input is clicked shadow is used */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.form input::placeholder{
+  /* color of input placeholder text */
+  color: #999;
+}
+
+.form button{
+  /* for button color font color etc */
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+  background: #fe6d73;
+}
+.qr-code{
+  /* for qr code padding etc */
+  opacity: 0;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+}
+.container.active .qr-code{
+  /* when qr code is generated */
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.qr-code img{
+  /* qr code image size */
+  width: 170px;
+}
+
+.md {
+  /* for signature at the end */
+    color: #003844;
+    padding: 40px;
+    text-align: center;
+}
+
+.mmd {
+  /* signature at the end */
+    text-decoration: none;
+    color: #003844;
+}
+
+
+/* for mobile view !! re styling elements */
+@media (max-width: 800px){
+
+  .body {
+    min-height: 70vh;
+  }
+  .all {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+  .container{
+    height: 400px;
+    max-width: 340px; 
+    border-radius: 0px 0px 0px 0px;
+  }
+  .container.active{
+    height: 500px;
+    border-radius: 80px 80px 80px 80px;
+  }
+  header p{
+    color: #c5dedd;
+    font-size: 12px;
+  }
+  .form :where(input, button){
+    height: 52px;
+  }
+  .qr-code img{
+    width: 160px;
+  }  
+}
+
+
+/* Nanum Gothic Coding, Font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
